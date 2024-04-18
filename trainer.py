@@ -1,10 +1,9 @@
 import torch
-from torch.optim import lr_scheduler
 import time
 from tempfile import TemporaryDirectory
 import os
 
-def train_model(dataset_sizes, dataloaders, model, criterion, optimizer, scheduler, num_epochs=25, device='cpu'):
+def train_model(dataset_sizes, dataloaders, model, criterion, optimizer, scheduler, num_epochs=2, device='cpu'):
     since = time.time()
 
     # Create a temporary directory to save training checkpoints

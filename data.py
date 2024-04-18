@@ -27,4 +27,4 @@ def dataSetup(data_dir):
     dataset_sizes = {x: len(image_datasets[x]) for x in ['train', 'val']}
     class_names = image_datasets['train'].classes
 
-    return dataloaders, dataset_sizes, class_names
+    return dataloaders, dataset_sizes, class_names, data_transforms

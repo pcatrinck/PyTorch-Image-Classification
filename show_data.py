@@ -12,5 +12,4 @@ def show_image(inp, title=None):
     if title is not None:
         plt.title(title)
     plt.ioff()
-    plt.pause(1)  # pause a bit so that plots are updated
-    plt.show()
+    plt.pause(0.1)  # pause a bit so that plots are updated

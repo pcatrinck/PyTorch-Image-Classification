@@ -12,7 +12,7 @@ from trainer import train_model
 from prediction import visualize_model
 
 cudnn.benchmark = True
-plt.ion()   # interactive mode
+#plt.ion()   # interactive mode
 
 def main():
     data_dir = 'data/hymenoptera_data'
@@ -23,6 +23,7 @@ def main():
     # Make a grid from batch
     out = torchvision.utils.make_grid(inputs)
     show_image(out, title=[class_names[x] for x in classes])
+    plt.show()
 
     ######################################################################
     # Finetuning the ConvNet
@@ -45,7 +46,7 @@ def main():
     model_ft = train_model(dataset_sizes, dataloaders, model_ft, criterion, optimizer_ft, exp_lr_scheduler, num_epochs=25, device='cpu')
     visualize_model(class_names, dataloaders, model_ft)
 
-    plt.ioff()
+    #plt.ioff()
     plt.show()
 
 if __name__ == "__main__":
